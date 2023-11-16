@@ -1,6 +1,17 @@
 {
   "$schema": "https://docs.renovatebot.com/renovate-schema.json",
   "extends": [
-    "config:recommended"
+    "config:base"
+  ],
+  "packageRules": [
+    /* Group by update type - major, minor, patch */
+    {
+      "groupName": "major",
+      "matchUpdateTypes": ["major"],
+    },
+    {
+      "groupName": "minor and patch",
+      "matchUpdateTypes": ["minor", "patch"],
+    },
   ]
 }
